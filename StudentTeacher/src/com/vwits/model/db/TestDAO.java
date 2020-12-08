@@ -1,0 +1,32 @@
+package com.vwits.model.db;
+
+import java.util.List;
+
+public interface TestDAO<T, E, S> {
+	/**
+	 * To insert T record in database
+	 * @param t Table 
+	 * @return number of rows affected after inserting the record
+	 */
+	public int save(T t);
+	
+	/**
+	 * To display particular T record
+	 * @param display record with respect to T ID
+	 * @return T record
+	 */
+	public List<T> get(E e);
+	
+	/**
+	 * To display all the T records
+	 * @return List of all the T records
+	 */
+	public List getAll();
+	
+	/**
+	 * Update Record
+	 * @param e according to record field
+	 * @return number of rows affected after updating the record
+	 */
+	public int update(S s1, S s2, S s3, S s4, S s5, E e);
+}
