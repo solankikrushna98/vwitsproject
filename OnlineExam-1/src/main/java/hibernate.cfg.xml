@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "utf-8"?>						<!--  tell version of xml and its encoding indeed its a metadata -->
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+      <property name = "hibernate.dialect">
+         org.hibernate.dialect.Oracle10gDialect									<!-- Write the dialect of the database to be used -->
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+         oracle.jdbc.driver.OracleDriver										<!-- Write Driver -->
+      </property>
+     
+      <property name = "hibernate.connection.url">
+         jdbc:oracle:thin:@localhost:1521:xe									<!-- Write Url -->
+      </property>
+      
+      <property name = "hibernate.connection.username">
+         system																	<!-- Username -->
+      </property>
+      
+      <property name = "hibernate.connection.password">
+         Krushna															 	<!-- Password -->
+      </property>
+      
+      <property name="hibernate.hbm2ddl.auto">update</property>
+       <property name="hibernate.show_sql">true</property>						<!-- Shows sql query in the console -->
+       
+       <!-- List of XML mapping files -->
+      
+   </session-factory>
+</hibernate-configuration>
+
